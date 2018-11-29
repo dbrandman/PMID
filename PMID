@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Fetch the data 
+ curl -s "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&amp;id=$1&amp;retmode=xml" | xsltproc pubmed2bibtex.xsl - 2>/dev/null
